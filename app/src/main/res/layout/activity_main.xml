@@ -8,12 +8,292 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:id="@+id/textView"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:text="Sign Up"
+        android:textSize="35dp"
+        android:gravity="center"
+        android:background="#ff00ff"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <Button
+        android:id="@+id/signUp"
+        android:layout_width="261dp"
+        android:layout_height="52dp"
+        android:text="Button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#99ff99"
+        app:layout_constraintBottom_toTopOf="@+id/signUp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.0">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_horizontal"
+                android:background="#99bbff"
+                android:text="User Details"
+                android:textSize="30dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center"/>
+            <TextView
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_horizontal"
+                android:background="#99bbff"
+                android:text="Name"
+                android:textSize="20sp"
+                android:layout_marginTop="5dp"
+                android:gravity="center"/>
+            <EditText
+                android:id="@+id/username"
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:background="#ffff99"
+                android:layout_gravity="center_horizontal"
+                android:hint="Name"
+                android:gravity="center"
+                android:layout_marginBottom="5dp"/>
+            <TextView
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_horizontal"
+                android:background="#99bbff"
+                android:text="Email"
+                android:textSize="20sp"
+                android:gravity="center"/>
+            <EditText
+                android:id="@+id/email"
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:background="#ffff99"
+                android:layout_gravity="center_horizontal"
+                android:hint="Email"
+                android:gravity="center"
+                android:layout_marginBottom="5dp"/>
+            <TextView
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_horizontal"
+                android:background="#99bbff"
+                android:text="Password"
+                android:textSize="20sp"
+                android:gravity="center"/>
+            <EditText
+                android:id="@+id/password"
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:background="#ffff99"
+                android:layout_gravity="center_horizontal"
+                android:hint="password"
+                android:gravity="center"/>
+            <TextView
+                android:id="@+id/atLeast8CharTV"
+                android:layout_width="300dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center_horizontal"
+                android:background="#ff9999"
+                android:text="At least 8 char"
+                android:textSize="15dp"
+                android:gravity="left"
+                android:padding="5dp"/>
+            <TextView
+                android:id="@+id/letters3TV"
+                android:layout_width="300dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center_horizontal"
+                android:background="#ff9999"
+                android:text="3 letters"
+                android:textSize="15dp"
+                android:gravity="left"
+                android:padding="5dp"/>
+            <TextView
+                android:id="@+id/upperCaseTV"
+                android:layout_width="300dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center_horizontal"
+                android:background="#ff9999"
+                android:text="Uppercase Letter"
+                android:textSize="15dp"
+                android:gravity="left"
+                android:padding="5dp"/>
+            <TextView
+                android:id="@+id/numerics3TV"
+                android:layout_width="300dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center_horizontal"
+                android:background="#ff9999"
+                android:text="Numerics 3"
+                android:textSize="15dp"
+                android:gravity="left"
+                android:padding="5dp"/>
+            <TextView
+                android:id="@+id/specialCharTV"
+                android:layout_width="300dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center_horizontal"
+                android:background="#ff9999"
+                android:text="specials"
+                android:textSize="15dp"
+                android:gravity="left"
+                android:padding="5dp"/>
+            <TextView
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_horizontal"
+                android:background="#99bbff"
+                android:text="Payment Details"
+                android:textSize="25sp"
+                android:gravity="center"
+                android:layout_marginTop="20dp" />
+            <TextView
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_horizontal"
+                android:background="#99bbff"
+                android:text="Name on card"
+                android:textSize="20sp"
+                android:gravity="center"
+                android:layout_marginTop="5dp"/>
+            <EditText
+                android:id="@+id/cardName"
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:background="#ffff99"
+                android:layout_gravity="center_horizontal"
+                android:hint="Name on card"
+                android:gravity="center"
+                android:layout_marginBottom="5dp"/>
+            <TextView
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_horizontal"
+                android:background="#99bbff"
+                android:text="Card Number"
+                android:textSize="20sp"
+                android:gravity="center"/>
+            <EditText
+                android:id="@+id/cardNumber"
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:background="#ffff99"
+                android:layout_gravity="center_horizontal"
+                android:hint="card number"
+                android:gravity="center"
+                android:layout_marginBottom="5dp"/>
+            <TextView
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_horizontal"
+                android:background="#99bbff"
+                android:text="Expiry Date"
+                android:textSize="20sp"
+                android:gravity="center"/>
+            <EditText
+                android:id="@+id/cardExp"
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:background="#ffff99"
+                android:layout_gravity="center_horizontal"
+                android:hint="Expiry date"
+                android:gravity="center"
+                android:layout_marginBottom="5dp"/>
+            <TextView
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_horizontal"
+                android:background="#99bbff"
+                android:text="CVV Number"
+                android:textSize="20dp"
+                android:gravity="center"/>
+            <EditText
+                android:id="@+id/cardCVV"
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:background="#ffff99"
+                android:layout_gravity="center_horizontal"
+                android:hint="CVV number"
+                android:gravity="center"
+                android:layout_marginBottom="5dp"/>
+            <TextView
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_horizontal"
+                android:background="#99bbff"
+                android:text="Physical Data"
+                android:textSize="25dp"
+                android:gravity="center"
+                android:layout_marginTop="20dp" />
+            <TextView
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_horizontal"
+                android:background="#99bbff"
+                android:text="Height"
+                android:textSize="20sp"
+                android:gravity="center"
+                android:layout_marginTop="5dp"/>
+            <EditText
+                android:id="@+id/userHeight"
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:background="#ffff99"
+                android:layout_gravity="center_horizontal"
+                android:hint="Height"
+                android:gravity="center"
+                android:layout_marginBottom="5dp"/>
+            <TextView
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_horizontal"
+                android:background="#99bbff"
+                android:text="Weight"
+                android:textSize="20sp"
+                android:gravity="center"/>
+            <EditText
+                android:id="@+id/userWeight"
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:background="#ffff99"
+                android:layout_gravity="center_horizontal"
+                android:hint="Weight"
+                android:gravity="center"
+                android:layout_marginBottom="5dp"/>
+            <TextView
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_horizontal"
+                android:background="#99bbff"
+                android:text="Age"
+                android:textSize="20sp"
+                android:gravity="center"/>
+            <EditText
+                android:id="@+id/userAge"
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:background="#ffff99"
+                android:layout_gravity="center_horizontal"
+                android:hint="Age"
+                android:gravity="center"
+                android:layout_marginBottom="5dp"/>
+
+        </LinearLayout>
+    </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
