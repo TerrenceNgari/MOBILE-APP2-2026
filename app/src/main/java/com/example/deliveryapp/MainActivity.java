@@ -3,6 +3,7 @@ package com.example.deliveryapp;
 import static android.widget.Toast.LENGTH_LONG;
 import static android.widget.Toast.LENGTH_SHORT;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -176,6 +177,11 @@ public class MainActivity extends AppCompatActivity {
                 String userHeightS = userHeight.getText().toString();
                 String userWeightS = userWeight.getText().toString();
                 String userAgeS = userAge.getText().toString();
+
+                //TEST: Intent to RestFood Items///////////////////////////
+                Intent i1 = new Intent(getApplicationContext(), OrderPage.class);
+                startActivity(i1);
+
                 //Validate inputs
                 if(isChar8 && isLetter3 && isUpper && isNum && isSpecial){
                     Toast.makeText(getApplicationContext(),"Valid", LENGTH_SHORT).show();

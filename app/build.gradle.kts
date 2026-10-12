@@ -34,6 +34,7 @@ android {
 
 dependencies {
 
+    implementation(libs.activity.ktx)
     implementation(libs.appcompat)
     implementation(platform("com.google.firebase:firebase-bom:34.4.0"))
     implementation(libs.firebase.database)
