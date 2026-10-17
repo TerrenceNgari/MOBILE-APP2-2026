@@ -29,7 +29,7 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.DatabaseReference;
 
-public class MainActivity extends AppCompatActivity {
+public class SignUp extends AppCompatActivity {
 
     //Flags
     boolean isChar8 = false;
@@ -49,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_signup);
 
         //Firebase Authentication: Initialization
         auth = FirebaseAuth.getInstance(); //Allow access to firebase Authentication services
@@ -188,7 +188,7 @@ public class MainActivity extends AppCompatActivity {
                     String passwordS = password.getText().toString();
 
                     //Create user account using Firebase Authentication
-                    auth.createUserWithEmailAndPassword(emailS, passwordS).addOnCompleteListener(MainActivity.this,
+                    auth.createUserWithEmailAndPassword(emailS, passwordS).addOnCompleteListener(SignUp.this,
                             new OnCompleteListener<AuthResult>() {
                                 @Override
                                 public void onComplete(@NonNull Task<AuthResult> task) {
