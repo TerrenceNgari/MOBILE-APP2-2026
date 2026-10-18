@@ -11,10 +11,10 @@
         android:id="@+id/restaurentName"
         android:layout_width="200dp"
         android:layout_height="40dp"
-        android:text="Restaurent"
-        android:textSize="25sp"
-        android:gravity="center"
         android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="Restaurant"
+        android:textSize="25sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

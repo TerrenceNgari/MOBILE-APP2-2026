@@ -13,15 +13,15 @@ public class StartPage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_start);
 
-        TextView textButtonLogin = findViewById(R.id.textButtonLogin);
-        TextView textButtonSignup = findViewById(R.id.textButtonSignup);
+        TextView loginButton = findViewById(R.id.textButtonLogin);
+        TextView signupButton = findViewById(R.id.textButtonSignup);
 
-        textButtonLogin.setOnClickListener(view -> {
+        loginButton.setOnClickListener(view -> {
             Intent intent = new Intent(StartPage.this, Login.class);
             startActivity(intent);
         });
 
-        textButtonSignup.setOnClickListener(view -> {
+        signupButton.setOnClickListener(view -> {
             Intent intent = new Intent(StartPage.this, SignUp.class);
             startActivity(intent);
         });
