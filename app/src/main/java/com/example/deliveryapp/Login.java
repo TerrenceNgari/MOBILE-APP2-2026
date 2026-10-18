@@ -48,7 +48,7 @@ public class Login extends AppCompatActivity {
                         //Login Successful
                         if (task.isSuccessful()){
                             Toast.makeText(this, "Log In Successful", Toast.LENGTH_SHORT).show();
-                            Intent intent = new Intent(this, OrderPage.class);
+                            Intent intent = new Intent(this, RestaurantSelection.class);
                             emailInput.setText(null);
                             passwordInput.setText(null);
                             startActivity(intent);

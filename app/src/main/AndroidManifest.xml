@@ -30,6 +30,10 @@
             android:exported="false"
             android:windowSoftInputMode="adjustResize"/>
 
+        <activity android:name=".RestaurantSelection"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize"/>
+
         <activity
             android:name=".OrderPage"
             android:exported="false"
