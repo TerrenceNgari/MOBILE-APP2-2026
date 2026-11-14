@@ -1,62 +1,95 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#FFF9F5">
 
+    <!-- App Logo -->
     <ImageView
         android:id="@+id/imageLogo"
-        android:layout_width="300dp"
-        android:layout_height="300dp"
-        android:layout_marginTop="50dp"
+        android:layout_width="260dp"
+        android:layout_height="260dp"
+        android:layout_marginTop="55dp"
+        android:contentDescription="MacroBite Logo"
+        android:scaleType="fitCenter"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@android:drawable/ic_menu_gallery" />
 
+    <!-- App Name -->
     <TextView
         android:id="@+id/textAppName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="25dp"
         android:text="@string/macrobite"
-        android:textSize="60sp"
+        android:textColor="#F66A2A"
+        android:textStyle="bold"
+        android:textSize="48sp"
+        android:letterSpacing="0.05"
+        android:gravity="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageLogo" />
+        app:layout_constraintTop_toBottomOf="@id/imageLogo" />
 
+    <!-- Tagline -->
+    <TextView
+        android:id="@+id/textTagline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="EAT SMART. LIVE BETTER."
+        android:textColor="#697381"
+        android:textSize="13sp"
+        android:textStyle="bold"
+        android:letterSpacing="0.12"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textAppName" />
+
+    <!-- Login Button -->
     <TextView
         android:id="@+id/textButtonLogin"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
-        android:background="@drawable/login_button_background"
-        android:shadowColor="@color/black"
-        android:shadowDx="3"
-        android:shadowDy="3"
-        android:shadowRadius="1"
+        android:layout_width="0dp"
+        android:layout_height="58dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginEnd="36dp"
+        android:layout_marginTop="55dp"
+        android:background="@drawable/mb_primary"
+        android:gravity="center"
         android:text="@string/log_in"
-        android:textColor="@color/black"
-        android:textSize="48sp"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:clickable="true"
+        android:focusable="true"
+        android:elevation="3dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textAppName" />
+        app:layout_constraintTop_toBottomOf="@id/textTagline" />
 
+    <!-- Sign Up Button -->
     <TextView
         android:id="@+id/textButtonSignup"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
-        android:background="@drawable/signup_button_background"
-        android:shadowColor="@color/black"
-        android:shadowDx="3"
-        android:shadowDy="3"
-        android:shadowRadius="1"
+        android:layout_width="0dp"
+        android:layout_height="58dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginEnd="36dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/mb_soft"
+        android:gravity="center"
         android:text="@string/sign_up"
-        android:textSize="48sp"
+        android:textColor="#C64A18"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:clickable="true"
+        android:focusable="true"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.487"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textButtonLogin" />
+        app:layout_constraintTop_toBottomOf="@id/textButtonLogin" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
