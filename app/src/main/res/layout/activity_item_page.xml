@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:fitsSystemWindows="true" android:fillViewport="true"
+    android:background="#FFF9F5" android:clipToPadding="false">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:padding="20dp" android:orientation="vertical">
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:gravity="center_vertical">
+            <TextView android:id="@+id/btnBack" android:layout_width="48dp" android:layout_height="48dp"
+                android:text="‹" android:textSize="33sp" android:textColor="#243040"
+                android:gravity="center" android:background="@drawable/mb_card"
+                android:clickable="true" android:focusable="true" android:contentDescription="Back to menu" />
+            <TextView android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content"
+                android:gravity="center" android:text="MACROBITE" android:textColor="#F66A2A"
+                android:letterSpacing="0.15" android:textSize="14sp" android:textStyle="bold" />
+            <TextView android:id="@+id/btnCart" android:layout_width="82dp" android:layout_height="48dp"
+                android:background="@drawable/mb_soft" android:text="Bag · 0" android:textColor="#C64A18"
+                android:gravity="center" android:textSize="14sp" android:textStyle="bold"
+                android:clickable="true" android:focusable="true" android:contentDescription="Open cart" />
+        </LinearLayout>
+
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="28dp" android:text="FRESHLY PREPARED"
+            android:textColor="#E35C22" android:textStyle="bold" android:letterSpacing="0.13" android:textSize="12sp" />
+        <TextView android:id="@+id/textItemName" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="6dp" android:text="Chicken Wrap" android:textColor="#1C2533"
+            android:textStyle="bold" android:textSize="32sp" />
+        <TextView android:id="@+id/textItemDescription" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="9dp" android:lineSpacingExtra="3dp" android:textSize="15sp"
+            android:textColor="#697381" android:text="Grilled chicken, lettuce and house sauce" />
+
+        <FrameLayout android:layout_width="match_parent" android:layout_height="204dp"
+            android:layout_marginTop="22dp" android:background="@drawable/mb_food_hero">
+            <ImageView
+                android:id="@+id/itemFoodImage"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:contentDescription="Selected food image"
+                android:src="@drawable/ic_launcher_background" />
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:layout_gravity="top|start" android:layout_margin="14dp" android:paddingLeft="12dp"
+                android:paddingRight="12dp" android:paddingTop="7dp" android:paddingBottom="7dp"
+                android:background="@drawable/mb_card" android:text="MEAL DETAIL"
+                android:textColor="#A45126" android:textStyle="bold" android:textSize="11sp" />
+        </FrameLayout>
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="22dp" android:orientation="horizontal" android:gravity="center_vertical">
+            <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                android:text="Nutrition facts" android:textSize="21sp" android:textStyle="bold" android:textColor="#1C2533" />
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Per serving" android:textSize="12sp" android:textColor="#697381" />
+        </LinearLayout>
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="12dp" android:orientation="horizontal">
+            <LinearLayout android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content"
+                android:padding="15dp" android:orientation="vertical" android:background="@drawable/mb_card">
+                <TextView android:text="CALORIES" android:textSize="11sp" android:letterSpacing="0.11" android:textColor="#89919B"
+                    android:layout_width="match_parent" android:layout_height="wrap_content" />
+                <TextView android:id="@+id/textCalories" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="7dp" android:text="460 kcal" android:textColor="#1C2533" android:textStyle="bold" android:textSize="19sp" />
+            </LinearLayout>
+            <View android:layout_width="12dp" android:layout_height="1dp" />
+            <LinearLayout android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content"
+                android:padding="15dp" android:orientation="vertical" android:background="@drawable/mb_card">
+                <TextView android:text="PROTEIN" android:textSize="11sp" android:letterSpacing="0.11" android:textColor="#89919B"
+                    android:layout_width="match_parent" android:layout_height="wrap_content" />
+                <TextView android:id="@+id/textProtein" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="7dp" android:text="32 g" android:textColor="#1C2533" android:textStyle="bold" android:textSize="19sp" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="12dp" android:orientation="horizontal">
+            <LinearLayout android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content"
+                android:padding="15dp" android:orientation="vertical" android:background="@drawable/mb_card">
+                <TextView android:text="CARBOHYDRATES" android:textSize="11sp" android:letterSpacing="0.06" android:textColor="#89919B"
+                    android:layout_width="match_parent" android:layout_height="wrap_content" />
+                <TextView android:id="@+id/textCarbs" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="7dp" android:text="42 g" android:textColor="#1C2533" android:textStyle="bold" android:textSize="19sp" />
+            </LinearLayout>
+            <View android:layout_width="12dp" android:layout_height="1dp" />
+            <LinearLayout android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content"
+                android:padding="15dp" android:orientation="vertical" android:background="@drawable/mb_card">
+                <TextView android:text="FATS" android:textSize="11sp" android:letterSpacing="0.11" android:textColor="#89919B"
+                    android:layout_width="match_parent" android:layout_height="wrap_content" />
+                <TextView android:id="@+id/textFat" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="7dp" android:text="17 g" android:textColor="#1C2533" android:textStyle="bold" android:textSize="19sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="22dp" android:padding="16dp" android:orientation="horizontal"
+            android:gravity="center_vertical" android:background="@drawable/mb_card">
+            <LinearLayout android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView android:text="Quantity" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:textColor="#697381" android:textSize="13sp" />
+                <TextView android:id="@+id/textItemPrice" android:text="$12.50 each" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:layout_marginTop="5dp" android:textColor="#1C2533"
+                    android:textStyle="bold" android:textSize="17sp" />
+            </LinearLayout>
+            <TextView android:id="@+id/btnMinus" android:layout_width="42dp" android:layout_height="42dp"
+                android:gravity="center" android:text="−" android:textSize="24sp" android:textColor="#D45520"
+                android:background="@drawable/mb_soft" android:clickable="true" android:focusable="true"
+                android:contentDescription="Decrease quantity" />
+            <TextView android:id="@+id/textQuantity" android:layout_width="44dp" android:layout_height="42dp"
+                android:gravity="center" android:text="1" android:textColor="#1C2533" android:textStyle="bold" android:textSize="17sp" />
+            <TextView android:id="@+id/btnPlus" android:layout_width="42dp" android:layout_height="42dp"
+                android:gravity="center" android:text="+" android:textSize="24sp" android:textColor="#D45520"
+                android:background="@drawable/mb_soft" android:clickable="true" android:focusable="true"
+                android:contentDescription="Increase quantity" />
+        </LinearLayout>
+        <TextView android:id="@+id/btnAddToCart" android:layout_width="match_parent" android:layout_height="58dp"
+            android:layout_marginTop="18dp" android:gravity="center" android:background="@drawable/mb_primary"
+            android:text="Add to cart · $12.50" android:textColor="#FFFFFF" android:textStyle="bold" android:textSize="16sp"
+            android:clickable="true" android:focusable="true" />
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="14dp" android:text="Nutrition values are illustrative demo estimates."
+            android:gravity="center" android:textSize="12sp" android:textColor="#89919B" />
+    </LinearLayout>
+</ScrollView>

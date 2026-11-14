@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "219419104073",
+    "firebase_url": "https://deliveryapp-aca15-default-rtdb.firebaseio.com",
+    "project_id": "deliveryapp-aca15",
+    "storage_bucket": "deliveryapp-aca15.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:219419104073:android:779d392219027ba6714098",
+        "android_client_info": {
+          "package_name": "com.example.deliveryapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyABc2bibGFoznAovh2yV04rg2UhehxSwuU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
