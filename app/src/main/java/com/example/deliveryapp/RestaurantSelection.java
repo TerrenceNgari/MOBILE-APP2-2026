@@ -2,6 +2,7 @@ package com.example.deliveryapp;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -27,5 +28,35 @@ public class RestaurantSelection extends AppCompatActivity {
             Intent intent = new Intent(this, OrderPage.class);
             startActivity(intent);
         });
+
+        profileButton.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+
+                        Intent intent = new Intent(
+                                RestaurantSelection.this,
+                                ProfilePage.class
+                        );
+
+                        startActivity(intent);
+                    }
+                }
+        );
+
+        cartButton.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+
+                        Intent intent = new Intent(
+                                RestaurantSelection.this,
+                                CartPage.class
+                        );
+
+                        startActivity(intent);
+                    }
+                }
+        );
     }
 }

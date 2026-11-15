@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:fitsSystemWindows="true" android:fillViewport="true" android:background="#FFF9F5">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:padding="20dp" android:orientation="vertical">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:gravity="center_vertical">
+            <TextView android:id="@+id/btnBack" android:layout_width="48dp" android:layout_height="48dp"
+                android:text="‹" android:textSize="33sp" android:textColor="#243040" android:gravity="center"
+                android:background="@drawable/mb_card" android:clickable="true" android:focusable="true"
+                android:contentDescription="Back to food menu" />
+            <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                android:gravity="center" android:text="MACROBITE" android:textColor="#F66A2A"
+                android:letterSpacing="0.15" android:textSize="14sp" android:textStyle="bold" />
+            <TextView android:id="@+id/btnProfile" android:layout_width="84dp" android:layout_height="48dp"
+                android:text="Profile" android:textColor="#C64A18" android:background="@drawable/mb_soft"
+                android:gravity="center" android:textSize="13sp" android:textStyle="bold"
+                android:clickable="true" android:focusable="true" />
+        </LinearLayout>
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="28dp" android:text="YOUR ORDER"
+            android:textColor="#E35C22" android:letterSpacing="0.13" android:textSize="12sp" android:textStyle="bold" />
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="6dp" android:text="Your cart" android:textSize="32sp"
+            android:textStyle="bold" android:textColor="#1C2533" />
+        <TextView android:id="@+id/textCartSubtitle" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="7dp" android:text="0 items ready to review"
+            android:textSize="14sp" android:textColor="#697381" />
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="22dp" android:padding="16dp" android:orientation="horizontal"
+            android:gravity="center_vertical" android:background="@drawable/mb_card_warm">
+            <TextView android:layout_width="40dp" android:layout_height="wrap_content" android:text="✦"
+                android:gravity="center" android:textSize="24sp" android:textColor="#F66A2A" />
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                android:orientation="vertical" android:paddingLeft="9dp">
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:text="A little more mindful" android:textColor="#6A3118"
+                    android:textStyle="bold" android:textSize="15sp" />
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp" android:text="Check the price and meal macros before placing an order."
+                    android:textColor="#8B5B45" android:textSize="12sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout android:id="@+id/cartItemsContainer" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:orientation="vertical" android:layout_marginTop="20dp" />
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="20dp" android:background="@drawable/mb_card" android:padding="18dp"
+            android:orientation="vertical">
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:text="MEAL NUTRITION" android:textStyle="bold" android:textSize="12sp"
+                android:letterSpacing="0.1" android:textColor="#F66A2A" />
+            <TextView android:id="@+id/textTotalCalories" android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginTop="8dp" android:text="0 kcal" android:textColor="#1C2533"
+                android:textStyle="bold" android:textSize="26sp" />
+            <TextView android:id="@+id/textGoalFeedback" android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginTop="5dp" android:text="Compared with a sample 2,000 kcal daily target"
+                android:textSize="12sp" android:textColor="#697381" />
+            <ProgressBar android:id="@+id/progressCalories" style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent" android:layout_height="9dp" android:layout_marginTop="14dp"
+                android:max="100" android:progress="0" android:progressTint="#F66A2A"
+                android:progressBackgroundTint="#F4E4D9" />
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:layout_marginTop="18dp">
+                <LinearLayout android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:orientation="vertical">
+                    <TextView android:text="CARBS" android:textColor="#89919B" android:textSize="11sp" android:layout_width="match_parent" android:layout_height="wrap_content" />
+                    <TextView android:id="@+id/textTotalCarbs" android:text="0 g" android:textColor="#1C2533" android:textStyle="bold" android:textSize="17sp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="5dp" />
+                </LinearLayout>
+                <LinearLayout android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:orientation="vertical">
+                    <TextView android:text="PROTEIN" android:textColor="#89919B" android:textSize="11sp" android:layout_width="match_parent" android:layout_height="wrap_content" />
+                    <TextView android:id="@+id/textTotalProtein" android:text="0 g" android:textColor="#1C2533" android:textStyle="bold" android:textSize="17sp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="5dp" />
+                </LinearLayout>
+                <LinearLayout android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:orientation="vertical">
+                    <TextView android:text="FATS" android:textColor="#89919B" android:textSize="11sp" android:layout_width="match_parent" android:layout_height="wrap_content" />
+                    <TextView android:id="@+id/textTotalFats" android:text="0 g" android:textColor="#1C2533" android:textStyle="bold" android:textSize="17sp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="5dp" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:background="@drawable/mb_card" android:layout_marginTop="16dp" android:padding="18dp"
+            android:orientation="vertical">
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Order summary"
+                android:textSize="20sp" android:textStyle="bold" android:textColor="#1C2533" />
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:layout_marginTop="16dp">
+                <TextView android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:text="Items subtotal"
+                    android:textSize="15sp" android:textColor="#697381" />
+                <TextView android:id="@+id/textTotalPrice" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="$0.00" android:textSize="21sp" android:textStyle="bold" android:textColor="#1C2533" />
+            </LinearLayout>
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginTop="12dp" android:text="Demo checkout only · no real payment or delivery fees."
+                android:textColor="#89919B" android:textSize="12sp" />
+        </LinearLayout>
+
+        <TextView android:id="@+id/btnPay" android:layout_width="match_parent" android:layout_height="58dp"
+            android:layout_marginTop="18dp" android:gravity="center" android:background="@drawable/mb_primary"
+            android:text="Place demo order" android:textColor="#FFFFFF" android:textStyle="bold" android:textSize="16sp"
+            android:clickable="true" android:focusable="true" />
+        <TextView android:id="@+id/btnShopMore" android:layout_width="match_parent" android:layout_height="48dp"
+            android:layout_marginTop="9dp" android:gravity="center" android:text="Continue shopping"
+            android:textColor="#D65B25" android:textStyle="bold" android:textSize="14sp"
+            android:clickable="true" android:focusable="true" />
+    </LinearLayout>
+</ScrollView>

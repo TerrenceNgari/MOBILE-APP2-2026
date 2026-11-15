@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:fillViewport="true"
+    android:background="#FFF9F5">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <!-- Header -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/btnHistoryBack"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:text="‹"
+                android:textSize="33sp"
+                android:textColor="#243040"
+                android:gravity="center"
+                android:background="@drawable/mb_card"
+                android:clickable="true"
+                android:focusable="true"
+                android:contentDescription="Go back" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="MACROBITE"
+                android:textColor="#F66A2A"
+                android:letterSpacing="0.15"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/btnHistoryCart"
+                android:layout_width="82dp"
+                android:layout_height="48dp"
+                android:text="Bag · 0"
+                android:textColor="#C64A18"
+                android:background="@drawable/mb_soft"
+                android:gravity="center"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:clickable="true"
+                android:focusable="true"
+                android:contentDescription="Open cart" />
+        </LinearLayout>
+
+        <!-- Page title -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:text="YOUR PREVIOUS MEALS"
+            android:textColor="#E35C22"
+            android:letterSpacing="0.13"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="Order history"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            android:textColor="#1C2533" />
+
+        <TextView
+            android:id="@+id/textHistorySubtitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            android:text="Your previous orders, newest first."
+            android:textSize="14sp"
+            android:textColor="#697381" />
+
+        <!-- Loading indicator -->
+        <ProgressBar
+            android:id="@+id/historyProgress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            android:indeterminateTint="#F66A2A"
+            android:visibility="gone" />
+
+        <!-- Dynamically generated order cards -->
+        <LinearLayout
+            android:id="@+id/historyContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="22dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:gravity="center"
+            android:text="MACROBITE · EAT MINDFULLY"
+            android:textColor="#A9A0A0"
+            android:textSize="11sp"
+            android:letterSpacing="0.12" />
+
+    </LinearLayout>
+</ScrollView>

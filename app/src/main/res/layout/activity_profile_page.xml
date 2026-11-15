@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:fitsSystemWindows="true" android:fillViewport="true" android:background="#FFF9F5">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:padding="20dp" android:orientation="vertical">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:gravity="center_vertical">
+            <TextView android:id="@+id/btnBack" android:layout_width="48dp" android:layout_height="48dp"
+                android:gravity="center" android:text="‹" android:textSize="33sp" android:textColor="#243040"
+                android:background="@drawable/mb_card" android:clickable="true" android:focusable="true"
+                android:contentDescription="Back to restaurants" />
+            <TextView android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content"
+                android:gravity="center" android:text="MACROBITE" android:textColor="#F66A2A"
+                android:letterSpacing="0.15" android:textSize="14sp" android:textStyle="bold" />
+            <TextView android:id="@+id/btnHistory" android:layout_width="84dp" android:layout_height="48dp"
+                android:gravity="center" android:text="Orders" android:textSize="14sp" android:textStyle="bold"
+                android:background="@drawable/mb_soft" android:textColor="#C64A18"
+                android:clickable="true" android:focusable="true" />
+        </LinearLayout>
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="28dp" android:text="YOUR ACCOUNT" android:letterSpacing="0.13"
+            android:textColor="#E35C22" android:textStyle="bold" android:textSize="12sp" />
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="6dp" android:text="My profile" android:textSize="32sp"
+            android:textStyle="bold" android:textColor="#1C2533" />
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="7dp" android:text="Manage your details and nutrition goals"
+            android:textSize="14sp" android:textColor="#697381" />
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="22dp" android:padding="20dp" android:orientation="horizontal"
+            android:gravity="center_vertical" android:background="@drawable/mb_card">
+            <TextView android:id="@+id/textAvatar" android:layout_width="70dp" android:layout_height="70dp"
+                android:gravity="center" android:text="DU" android:textSize="24sp" android:textStyle="bold"
+                android:textColor="#A94A19" android:background="@drawable/mb_avatar"
+                android:contentDescription="Profile initials" />
+            <LinearLayout android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content"
+                android:orientation="vertical" android:paddingLeft="15dp">
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:text="ACCOUNT HOLDER" android:letterSpacing="0.08" android:textColor="#E35C22"
+                    android:textSize="10sp" android:textStyle="bold" />
+                <TextView android:id="@+id/textProfileName" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:text="Demo User" android:layout_marginTop="5dp" android:textColor="#1C2533"
+                    android:textSize="21sp" android:textStyle="bold" />
+                <TextView android:id="@+id/textProfileEmail" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:text="demo@example.com" android:layout_marginTop="4dp" android:textColor="#697381" android:textSize="12sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="24dp" android:text="Body information" android:textSize="20sp"
+            android:textStyle="bold" android:textColor="#1C2533" />
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:layout_marginTop="12dp">
+            <LinearLayout android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content"
+                android:background="@drawable/mb_card" android:padding="17dp" android:orientation="vertical">
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:text="HEIGHT" android:textColor="#89919B" android:textSize="11sp" android:letterSpacing="0.12" />
+                <TextView android:id="@+id/textProfileHeight" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp" android:text="170 cm" android:textSize="22sp" android:textStyle="bold" android:textColor="#1C2533" />
+            </LinearLayout>
+            <View android:layout_width="12dp" android:layout_height="1dp" />
+            <LinearLayout android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content"
+                android:background="@drawable/mb_card" android:padding="17dp" android:orientation="vertical">
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:text="WEIGHT" android:textColor="#89919B" android:textSize="11sp" android:letterSpacing="0.12" />
+                <TextView android:id="@+id/textProfileWeight" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp" android:text="70 kg" android:textSize="22sp" android:textStyle="bold" android:textColor="#1C2533" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="12dp" android:padding="15dp" android:orientation="horizontal"
+            android:gravity="center_vertical" android:background="@drawable/mb_card">
+            <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                android:text="Gender (optional)" android:textSize="14sp" android:textColor="#697381" />
+            <TextView android:id="@+id/textProfileGender" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Not specified" android:textSize="14sp" android:textStyle="bold" android:textColor="#1C2533" />
+        </LinearLayout>
+
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="24dp" android:text="Your nutrition goal" android:textSize="20sp"
+            android:textStyle="bold" android:textColor="#1C2533" />
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="12dp" android:background="@drawable/mb_card_warm" android:padding="19dp"
+            android:orientation="vertical">
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:text="CURRENT GOAL" android:textStyle="bold" android:letterSpacing="0.12"
+                android:textSize="11sp" android:textColor="#D25B26" />
+            <TextView android:id="@+id/textProfileGoal" android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginTop="6dp" android:text="Maintain weight" android:textStyle="bold"
+                android:textColor="#1C2533" android:textSize="23sp" />
+            <TextView android:id="@+id/textProfileTarget" android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginTop="10dp" android:text="Sample goal: 2,000 kcal per day"
+                android:textColor="#986245" android:textSize="13sp" />
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginTop="6dp" android:text="Demo estimate only, not personalized health advice."
+                android:textColor="#A4775E" android:textSize="12sp" />
+        </LinearLayout>
+
+        <TextView android:id="@+id/btnEdit" android:layout_width="match_parent" android:layout_height="56dp"
+            android:layout_marginTop="24dp" android:background="@drawable/mb_primary" android:gravity="center"
+            android:text="Edit profile" android:textColor="#FFFFFF" android:textStyle="bold" android:textSize="16sp"
+            android:clickable="true" android:focusable="true" />
+        <TextView android:id="@+id/btnLogout" android:layout_width="match_parent" android:layout_height="54dp"
+            android:layout_marginTop="12dp" android:background="@drawable/mb_outline" android:gravity="center"
+            android:text="Log out of demo" android:textColor="#1C2533" android:textStyle="bold" android:textSize="15sp"
+            android:clickable="true" android:focusable="true" />
+        <TextView android:id="@+id/btnDelete" android:layout_width="match_parent" android:layout_height="54dp"
+            android:layout_marginTop="12dp" android:background="@drawable/mb_danger" android:gravity="center"
+            android:text="Delete demo account" android:textColor="#C64732" android:textStyle="bold" android:textSize="15sp"
+            android:clickable="true" android:focusable="true" />
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="16dp" android:gravity="center" android:text="Your data is held in memory for this demo."
+            android:textSize="12sp" android:textColor="#89919B" />
+    </LinearLayout>
+</ScrollView>

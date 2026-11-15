@@ -22,7 +22,7 @@ public class StartPage extends AppCompatActivity {
         });
 
         signupButton.setOnClickListener(view -> {
-            Intent intent = new Intent(StartPage.this, SignUp.class);
+            Intent intent = new Intent(StartPage.this, MainActivity.class);
             startActivity(intent);
         });
     }

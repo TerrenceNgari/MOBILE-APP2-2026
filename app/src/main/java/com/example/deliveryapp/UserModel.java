@@ -21,7 +21,7 @@ public class UserModel {
     }
 
     //Getter methods
-    public String getUsername() {
+     public String getUsername() {
         return username;
     }
 
