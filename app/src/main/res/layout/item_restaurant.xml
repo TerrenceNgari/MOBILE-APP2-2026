@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#FFF9F5">
+
+    <!-- Restaurant Information Card -->
+    <LinearLayout
+        android:id="@+id/layoutRestaurantInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="24dp"
+        android:background="@drawable/mb_card"
+        android:elevation="3dp"
+        android:orientation="vertical"
+        android:padding="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!-- Restaurant Image -->
+        <ImageView
+            android:id="@+id/imageRestaurant"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:layout_marginBottom="18dp"
+            android:contentDescription="Restaurant image"
+            android:scaleType="centerCrop"
+            app:srcCompat="@android:drawable/ic_menu_gallery" />
+
+        <!-- Restaurant Name -->
+        <TextView
+            android:id="@+id/textRestaurantName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:hint="Restaurant Name"
+            android:textColor="#1C2533"
+            android:textColorHint="#1C2533"
+            android:textSize="23sp"
+            android:textStyle="bold" />
+
+        <!-- Restaurant Description -->
+        <TextView
+            android:id="@+id/textRestaurantDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:hint="Restaurant Description"
+            android:lineSpacingExtra="4dp"
+            android:textColor="#697381"
+            android:textColorHint="#697381"
+            android:textSize="15sp" />
+
+        <!-- Restaurant Address -->
+        <TextView
+            android:id="@+id/textRestaurantAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="22dp"
+            android:hint="Restaurant Address"
+            android:textColor="#697381"
+            android:textColorHint="#697381"
+            android:textSize="14sp" />
+
+        <!-- View Menu Button -->
+        <TextView
+            android:id="@+id/textButtonRestaurantMenu"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:background="@drawable/mb_primary"
+            android:clickable="true"
+            android:elevation="2dp"
+            android:focusable="true"
+            android:gravity="center"
+            android:text="View Menu"
+            android:textColor="#FFFFFF"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

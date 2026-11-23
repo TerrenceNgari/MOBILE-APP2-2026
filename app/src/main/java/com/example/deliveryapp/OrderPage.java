@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -43,6 +44,8 @@ public class OrderPage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_order_page);
+
+        String restaurantId = getIntent().getStringExtra("restaurantId");
 
         // Profile button
         findViewById(R.id.btnOrderProfile).setOnClickListener(
@@ -126,7 +129,7 @@ public class OrderPage extends AppCompatActivity {
         databaseReference = FirebaseDatabase
                 .getInstance()
                 .getReference("restaurants")
-                .child("restaurant_01")
+                .child(restaurantId)
                 .child("items");
 
         loadFoodItems();
@@ -147,6 +150,14 @@ public class OrderPage extends AppCompatActivity {
                 // Retrieve every food item
                 for (DataSnapshot itemSnapshot
                         : snapshot.getChildren()) {
+
+                    // Ignore the int field.
+                    if (itemSnapshot.getKey().equals("int")) {
+                        continue;
+                    }
+
+                    /*Log.d("FoodDebug", "Item key: " + itemSnapshot.getKey()
+                            + ", Value: " + itemSnapshot.getValue());*/
 
                     FoodModal food =
                             itemSnapshot.getValue(

@@ -16,6 +16,10 @@ import com.google.firebase.database.ValueEventListener;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
+import java.util.ArrayList;
 
 public class RestaurantSelection extends AppCompatActivity {
     @Override
@@ -23,31 +27,49 @@ public class RestaurantSelection extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_restaurant_selection);
 
-        //Only menuButton is used here for now.
+        // Navigation Buttons
         TextView cartButton = findViewById(R.id.textButtonCart);
         TextView profileButton = findViewById(R.id.textButtonProfile);
-        ImageView restaurantImage = findViewById(R.id.imageRestaurant);
-        TextView restaurantName = findViewById(R.id.textRestaurantName);
-        TextView restaurantDescription = findViewById(R.id.textRestaurantDescription);
-        TextView restaurantAddress = findViewById(R.id.textRestaurantAddress);
-        TextView menuButton = findViewById(R.id.textButtonRestaurantMenu);
+
+        RecyclerView recyclerView = findViewById(R.id.recyclerViewRestaurants);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+
+        ArrayList<RestaurantModal> arrayList = new ArrayList<>();
+
+        RestaurantAdapter adapter = new RestaurantAdapter(this, arrayList);
+
+        recyclerView.setAdapter(adapter);
+
 
         DatabaseReference restaurantRef = FirebaseDatabase.getInstance()
-                .getReference("restaurants")
-                .child("restaurant_01");
+                .getReference("restaurants");
 
 
         restaurantRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                String name = snapshot.child("name").getValue(String.class);
-                String description = snapshot.child("description").getValue(String.class);
-                String address = snapshot.child("address").getValue(String.class);
 
-                restaurantImage.setImageResource(R.drawable.restaurant_burger_house);
-                restaurantName.setText(name);
-                restaurantDescription.setText(description);
-                restaurantAddress.setText(address);
+                arrayList.clear();
+                for (DataSnapshot dataSnapshot : snapshot.getChildren()){
+                    String id = dataSnapshot.getKey();
+                    String name = dataSnapshot.child("name").getValue(String.class);
+                    String description = dataSnapshot.child("description").getValue(String.class);
+                    String address = dataSnapshot.child("address").getValue(String.class);
+                    String image = dataSnapshot.child("imageName").getValue(String.class);
+
+                    RestaurantModal restaurantModal = new RestaurantModal(
+                            id,
+                            name,
+                            description,
+                            address,
+                            image
+                    );
+
+                    arrayList.add(restaurantModal);
+                }
+
+                adapter.notifyDataSetChanged();
+
             }
 
             @Override
@@ -56,14 +78,6 @@ public class RestaurantSelection extends AppCompatActivity {
             }
         });
 
-
-
-
-
-        menuButton.setOnClickListener(view -> {
-            Intent intent = new Intent(this, OrderPage.class);
-            startActivity(intent);
-        });
 
         profileButton.setOnClickListener(
                 new View.OnClickListener() {
