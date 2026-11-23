@@ -16,6 +16,8 @@ public class FoodModal {
     private int discount;
     private int quantity = 1;
 
+    private int caffeine;
+
     // Empty constructor required by Firebase
     public FoodModal() {
     }
@@ -35,6 +37,23 @@ public class FoodModal {
         this.protein = protein;
         this.fats = fats;
         this.discount = discount;
+    }
+
+    public FoodModal(String foodName, String imageName,
+                     String description, double price,
+                     int calories, int carbs, int protein,
+                     int fats, int discount, int caffeine) {
+
+        this.foodName = foodName;
+        this.imageName = imageName;
+        this.description = description;
+        this.price = price;
+        this.calories = calories;
+        this.carbs = carbs;
+        this.protein = protein;
+        this.fats = fats;
+        this.discount = discount;
+        this.caffeine = caffeine;
     }
 
     // Getters
@@ -73,6 +92,10 @@ public class FoodModal {
 
     public int getDiscount() {
         return discount;
+    }
+
+    public int getCaffeine() {
+        return caffeine;
     }
 
     // Setters
@@ -128,5 +151,9 @@ public class FoodModal {
 
     public double getSubtotal() {
         return getSalePrice() * quantity;
+    }
+
+    public void setCaffeine(int caffeine) {
+        this.caffeine = caffeine;
     }
 }

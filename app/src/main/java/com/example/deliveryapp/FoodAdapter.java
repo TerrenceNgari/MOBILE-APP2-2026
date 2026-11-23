@@ -18,10 +18,12 @@ public class FoodAdapter extends RecyclerView.Adapter<FoodAdapter.FoodViewHolder
 
     Context context;
     ArrayList<FoodModal> arrayList;
+    String restaurantId;
 
-    public FoodAdapter(Context context, ArrayList<FoodModal> arrayList) {
+    public FoodAdapter(Context context, ArrayList<FoodModal> arrayList, String restaurantId) {
         this.context = context;
         this.arrayList = arrayList;
+        this.restaurantId = restaurantId;
     }
 
     @NonNull
@@ -75,6 +77,8 @@ public class FoodAdapter extends RecyclerView.Adapter<FoodAdapter.FoodViewHolder
 
                 Intent intent = new Intent(context, ItemPage.class);
 
+                intent.putExtra("restaurantId", restaurantId);
+
                 intent.putExtra("foodName", food.getFoodName());
                 intent.putExtra("imageName", food.getImageName());
                 intent.putExtra("price", food.getPrice());
@@ -85,6 +89,7 @@ public class FoodAdapter extends RecyclerView.Adapter<FoodAdapter.FoodViewHolder
                 intent.putExtra("protein", food.getProtein());
                 intent.putExtra("fats", food.getFats());
                 intent.putExtra("discount", food.getDiscount());
+                intent.putExtra("caffeine", food.getCaffeine());
 
                 context.startActivity(intent);
             }

@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -21,6 +22,7 @@ public class ItemPage extends AppCompatActivity {
     private TextView textCarbs;
     private TextView textProtein;
     private TextView textFat;
+    private TextView textCaffeine;
     private TextView textQuantity;
     private TextView btnAddToCart;
     private TextView btnMinus;
@@ -29,8 +31,11 @@ public class ItemPage extends AppCompatActivity {
     private TextView btnCart;
 
     private ImageView itemFoodImage;
+    private LinearLayout containerCaffeine;
+
 
     // Selected food information
+    private String restaurantId;
     private String foodName;
     private String description;
     private String imageName;
@@ -41,6 +46,7 @@ public class ItemPage extends AppCompatActivity {
     private int protein;
     private int fats;
     private int discount;
+    private int caffeine;
 
     private int quantity = 1;
 
@@ -76,6 +82,7 @@ public class ItemPage extends AppCompatActivity {
         textCarbs = findViewById(R.id.textCarbs);
         textProtein = findViewById(R.id.textProtein);
         textFat = findViewById(R.id.textFat);
+        textCaffeine = findViewById(R.id.textCaffeine);
 
         textQuantity = findViewById(R.id.textQuantity);
 
@@ -86,11 +93,15 @@ public class ItemPage extends AppCompatActivity {
         btnCart = findViewById(R.id.btnCart);
 
         itemFoodImage = findViewById(R.id.itemFoodImage);
+
+        containerCaffeine = findViewById(R.id.containerCaffeine);
     }
 
     private void receiveFoodDetails() {
 
         Intent intent = getIntent();
+
+        restaurantId = intent.getStringExtra("restaurantId");
 
         foodName = intent.getStringExtra("foodName");
         description = intent.getStringExtra("description");
@@ -103,6 +114,8 @@ public class ItemPage extends AppCompatActivity {
         protein = intent.getIntExtra("protein", 0);
         fats = intent.getIntExtra("fats", 0);
         discount = intent.getIntExtra("discount", 0);
+        caffeine = intent.getIntExtra("caffeine", 0);
+
 
         if (foodName == null) {
             foodName = "Unknown food";
@@ -111,6 +124,7 @@ public class ItemPage extends AppCompatActivity {
         if (description == null) {
             description = "";
         }
+
     }
 
     private double getSalePrice() {
@@ -130,6 +144,17 @@ public class ItemPage extends AppCompatActivity {
         textCarbs.setText(carbs + " g");
         textProtein.setText(protein + " g");
         textFat.setText(fats + " g");
+        textCaffeine.setText(caffeine + " mg");
+
+
+        if ("restaurant_02".equals(restaurantId)){
+            containerCaffeine.setVisibility(View.VISIBLE);
+        }
+
+        else {
+            containerCaffeine.setVisibility(View.GONE);
+        }
+
 
         textItemPrice.setText(
                 formatPrice(getSalePrice()) + " each"
@@ -235,7 +260,8 @@ public class ItemPage extends AppCompatActivity {
                         carbs,
                         protein,
                         fats,
-                        discount
+                        discount,
+                        caffeine
                 );
 
                 cartFood.setQuantity(quantity);

@@ -87,7 +87,7 @@ public class OrderPage extends AppCompatActivity {
                 new GridLayoutManager(this, 2)
         );
 
-        adapter = new FoodAdapter(this, arrLst);
+        adapter = new FoodAdapter(this, arrLst, restaurantId);
         recView.setAdapter(adapter);
 
         // Search bar

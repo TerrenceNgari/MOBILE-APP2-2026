@@ -23,6 +23,9 @@ public class RestaurantModal {
         this.imageName = imageName;
     }
 
+
+    // Getters
+
     public String getId(){
         return id;
     }
@@ -43,6 +46,9 @@ public class RestaurantModal {
         return imageName;
     }
 
+
+
+    // Setters
 
     public void setId(String id){
         this.id = id;
