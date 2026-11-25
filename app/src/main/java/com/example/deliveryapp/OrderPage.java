@@ -8,6 +8,7 @@ import android.text.TextWatcher;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -38,6 +39,7 @@ public class OrderPage extends AppCompatActivity {
 
     private ValueEventListener foodListener;
 
+    private TextView textRestaurantName;
     private EditText searchBar;
 
     @Override
@@ -47,6 +49,9 @@ public class OrderPage extends AppCompatActivity {
         setContentView(R.layout.activity_order_page);
 
         String restaurantId = getIntent().getStringExtra("restaurantId");
+        String restaurantName = getIntent().getStringExtra("restaurantName");
+        textRestaurantName = findViewById(R.id.restaurentName);
+        textRestaurantName.setText(restaurantName);
 
         // Profile button
         findViewById(R.id.btnOrderProfile).setOnClickListener(

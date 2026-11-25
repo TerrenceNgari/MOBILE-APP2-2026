@@ -300,7 +300,10 @@ public class OrderHistoryPage extends AppCompatActivity {
                         + " g  ·  Protein: "
                         + order.getTotalProtein()
                         + " g  ·  Fats: "
-                        + order.getTotalFats() + " g",
+                        + order.getTotalFats()
+                        + " g  ·  Caffeine: "
+                        + order.getTotalCaffeine() + " mg",
+
                 13,
                 "#697381",
                 false
@@ -392,7 +395,8 @@ public class OrderHistoryPage extends AppCompatActivity {
                     food.getCarbs(),
                     food.getProtein(),
                     food.getFats(),
-                    food.getDiscount()
+                    food.getDiscount(),
+                    food.getCaffeine()
             );
 
             cartFood.setQuantity(food.getQuantity());

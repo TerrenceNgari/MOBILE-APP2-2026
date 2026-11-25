@@ -28,6 +28,7 @@ import androidx.annotation.NonNull;
 public class CartPage extends AppCompatActivity {
 
     private static final int SAMPLE_CALORIE_TARGET = 2000;
+    private static final int HIGH_CAFFEINE_THRESHOLD = 200;
 
     private LinearLayout cartItemsContainer;
     private TextView textCartSubtitle;
@@ -36,10 +37,13 @@ public class CartPage extends AppCompatActivity {
     private TextView textTotalCarbs;
     private TextView textTotalProtein;
     private TextView textTotalFats;
+    private TextView textTotalCaffeine;
     private TextView textTotalPrice;
     private TextView btnPay;
 
     private ProgressBar progressCalories;
+    private String restaurantId;
+    private LinearLayout containerTotalCaffeine;
 
     private boolean isSubmittingOrder = false;
 
@@ -60,6 +64,10 @@ public class CartPage extends AppCompatActivity {
     }
 
     private void initializeViews() {
+        Intent intent = getIntent();
+        if (intent.getStringExtra("restaurantId") != null){
+            restaurantId = intent.getStringExtra("restaurantId");
+        }
 
         cartItemsContainer = findViewById(R.id.cartItemsContainer);
         textCartSubtitle = findViewById(R.id.textCartSubtitle);
@@ -68,9 +76,12 @@ public class CartPage extends AppCompatActivity {
         textTotalCarbs = findViewById(R.id.textTotalCarbs);
         textTotalProtein = findViewById(R.id.textTotalProtein);
         textTotalFats = findViewById(R.id.textTotalFats);
+        textTotalCaffeine = findViewById(R.id.textTotalCaffeine);
         textTotalPrice = findViewById(R.id.textTotalPrice);
         progressCalories = findViewById(R.id.progressCalories);
         btnPay = findViewById(R.id.btnPay);
+
+        containerTotalCaffeine = findViewById(R.id.containerTotalCaffeineCart);
     }
 
     private void setupButtons() {
@@ -91,6 +102,8 @@ public class CartPage extends AppCompatActivity {
                         Intent intent = new Intent(
                                 CartPage.this, OrderPage.class
                         );
+
+                        intent.putExtra("restaurantId", restaurantId);
 
                         intent.addFlags(
                                 Intent.FLAG_ACTIVITY_CLEAR_TOP
@@ -309,6 +322,31 @@ public class CartPage extends AppCompatActivity {
                 CartManager.getTotalFats() + " g"
         );
 
+
+
+        boolean highCaffeine =
+                CartManager.getTotalCaffeine() >= HIGH_CAFFEINE_THRESHOLD;
+
+        if (highCaffeine){
+            textTotalCaffeine.setText(
+                    CartManager.getTotalCaffeine() + " mg" + "⚠\uFE0F"
+            );
+        }
+        else{
+            textTotalCaffeine.setText(
+                    CartManager.getTotalCaffeine() + " mg"
+            );
+        }
+
+        if ("restaurant_02".equals(restaurantId)){
+            containerTotalCaffeine.setVisibility(View.VISIBLE);
+        }
+        else {
+            containerTotalCaffeine.setVisibility(View.GONE);
+        }
+
+
+
         int calories = CartManager.getTotalCalories();
 
         int percentage = Math.round(
@@ -449,7 +487,8 @@ public class CartPage extends AppCompatActivity {
                     food.getCarbs(),
                     food.getProtein(),
                     food.getFats(),
-                    food.getDiscount()
+                    food.getDiscount(),
+                    food.getCaffeine()
             );
 
             copy.setQuantity(food.getQuantity());
@@ -467,6 +506,7 @@ public class CartPage extends AppCompatActivity {
                 CartManager.getTotalCarbs(),
                 CartManager.getTotalProtein(),
                 CartManager.getTotalFats(),
+                CartManager.getTotalCaffeine(),
                 orderedItems
         );
 
@@ -571,6 +611,19 @@ public class CartPage extends AppCompatActivity {
         if (name.contains("pie")) {
             return "\uD83E\uDD67";
         }
+
+        if (name.contains("coffee") ||
+                name.contains("latte") ||
+                name.contains("cappuccino") ||
+                name.contains("espresso") ||
+                name.contains("brew")) {
+            return "☕";
+        }
+
+        if (name.contains("donut")) {
+            return "\uD83C\uDF69";
+        }
+
 
         return "\uD83C\uDF7D";
     }
