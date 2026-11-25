@@ -95,15 +95,9 @@ public class OrderHistoryPage extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
-        updateCartButton();
+
     }
 
-    private void updateCartButton() {
-
-        btnHistoryCart.setText(
-                "Bag · " + CartManager.getItemCount()
-        );
-    }
 
     private void loadOrderHistory() {
 

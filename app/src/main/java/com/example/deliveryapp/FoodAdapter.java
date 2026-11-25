@@ -51,6 +51,20 @@ public class FoodAdapter extends RecyclerView.Adapter<FoodAdapter.FoodViewHolder
                 String.format(Locale.CANADA, "$%.2f", food.getPrice())
         );
 
+        // Display discount only if greater than zero
+        if (food.getDiscount() > 0) {
+
+            holder.foodDiscount.setText(
+                    food.getDiscount() + "% OFF"
+            );
+
+            holder.foodDiscount.setVisibility(View.VISIBLE);
+
+        } else {
+
+            holder.foodDiscount.setVisibility(View.GONE);
+        }
+
         // Calories
         holder.foodCalories.setText(
                 food.getCalories() + " kcal"
@@ -106,6 +120,7 @@ public class FoodAdapter extends RecyclerView.Adapter<FoodAdapter.FoodViewHolder
 
         TextView foodName;
         TextView foodPrice;
+        TextView foodDiscount;
         TextView foodCalories;
         ImageView image;
 
@@ -116,6 +131,7 @@ public class FoodAdapter extends RecyclerView.Adapter<FoodAdapter.FoodViewHolder
             foodPrice = itemView.findViewById(R.id.foodPrice);
             foodCalories = itemView.findViewById(R.id.foodCalories);
             image = itemView.findViewById(R.id.foodImg);
+            foodDiscount = itemView.findViewById(R.id.foodDiscount);
 
             itemView.findViewById(R.id.foodAddBtn)
                     .setOnClickListener(new View.OnClickListener() {

@@ -14,9 +14,11 @@
                 android:gravity="center" android:text="MACROBITE" android:textColor="#F66A2A"
                 android:letterSpacing="0.15" android:textSize="14sp" android:textStyle="bold" />
             <TextView android:id="@+id/btnProfile" android:layout_width="84dp" android:layout_height="48dp"
-                android:text="Profile" android:textColor="#C64A18" android:background="@drawable/mb_soft"
-                android:gravity="center" android:textSize="13sp" android:textStyle="bold"
-                android:clickable="true" android:focusable="true" />
+                android:background="#F66A2A"
+                android:gravity="center"
+                android:paddingTop="15dp"
+                android:clickable="true" android:focusable="true"
+                android:drawableTop="@drawable/ic_profile"/>
         </LinearLayout>
         <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
             android:layout_marginTop="28dp" android:text="YOUR ORDER"
@@ -101,6 +103,22 @@
             android:layout_marginTop="18dp" android:gravity="center" android:background="@drawable/mb_primary"
             android:text="Place demo order" android:textColor="#FFFFFF" android:textStyle="bold" android:textSize="16sp"
             android:clickable="true" android:focusable="true" />
+
+        <!--Pick Up Order-->
+        <TextView
+            android:id="@+id/btnPickup"
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:layout_marginTop="9dp"
+            android:gravity="center"
+            android:background="@drawable/mb_primary"
+            android:text="Pick Up Order"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:clickable="true"
+            android:focusable="true"/>
+
         <TextView android:id="@+id/btnShopMore" android:layout_width="match_parent" android:layout_height="48dp"
             android:layout_marginTop="9dp" android:gravity="center" android:text="Continue shopping"
             android:textColor="#D65B25" android:textStyle="bold" android:textSize="14sp"

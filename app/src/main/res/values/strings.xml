@@ -3,4 +3,6 @@
     <string name="log_in">Log In</string>
     <string name="macrobite">MacroBite</string>
     <string name="sign_up">Sign Up</string>
+    <string name="email">Email</string>
+    <string name="google_map_api_key">AIzaSyD2Z_VaQ4g_7hGIT4S7f5ke7_TefjeE474</string>
 </resources>

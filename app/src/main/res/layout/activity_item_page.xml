@@ -16,9 +16,11 @@
                 android:gravity="center" android:text="MACROBITE" android:textColor="#F66A2A"
                 android:letterSpacing="0.15" android:textSize="14sp" android:textStyle="bold" />
             <TextView android:id="@+id/btnCart" android:layout_width="82dp" android:layout_height="48dp"
-                android:background="@drawable/mb_soft" android:text="Bag · 0" android:textColor="#C64A18"
-                android:gravity="center" android:textSize="14sp" android:textStyle="bold"
-                android:clickable="true" android:focusable="true" android:contentDescription="Open cart" />
+                android:background="#F66A2A"
+                android:paddingTop="15dp"
+                android:gravity="center" android:textSize="14sp"
+                android:clickable="true" android:focusable="true" android:contentDescription="Open cart"
+                android:drawableTop="@drawable/ic_cart" />
         </LinearLayout>
 
         <TextView android:layout_width="match_parent" android:layout_height="wrap_content"

@@ -124,6 +124,37 @@ public class CartPage extends AppCompatActivity {
                 showPaymentDialog();
             }
         });
+
+        findViewById(R.id.btnPickup).setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+
+                        String restaurantId =
+                                getIntent().getStringExtra("restaurantId");
+
+                        if (restaurantId == null || restaurantId.isEmpty()) {
+
+                            Toast.makeText(
+                                    CartPage.this,
+                                    "Restaurant not selected",
+                                    Toast.LENGTH_SHORT
+                            ).show();
+
+                            return;
+                        }
+
+                        Intent intent = new Intent(
+                                CartPage.this,
+                                PickUpMapPage.class
+                        );
+
+                        intent.putExtra("restaurantId", restaurantId);
+
+                        startActivity(intent);
+                    }
+                }
+        );
     }
 
     private void displayCart() {

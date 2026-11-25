@@ -1,4 +1,3 @@
-
 package com.example.deliveryapp;
 
 import android.content.Intent;
@@ -241,7 +240,7 @@ public class ItemPage extends AppCompatActivity {
                         ItemPage.this,
                         CartPage.class
                 );
-
+                intent.putExtra("restaurantId", restaurantId);
                 startActivity(intent);
             }
         });
@@ -278,7 +277,7 @@ public class ItemPage extends AppCompatActivity {
                         ItemPage.this,
                         CartPage.class
                 );
-
+                intent.putExtra("restaurantId", restaurantId);
                 startActivity(intent);
             }
         });
