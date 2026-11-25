@@ -14,6 +14,7 @@ public class OrderModal {
     private int totalCarbs;
     private int totalProtein;
     private int totalFats;
+    private int totalCaffeine;
     private ArrayList<FoodModal> items;
 
     // Required by Firebase
@@ -37,6 +38,28 @@ public class OrderModal {
         this.totalCarbs = totalCarbs;
         this.totalProtein = totalProtein;
         this.totalFats = totalFats;
+        this.items = items;
+    }
+
+    public OrderModal(String orderId, String userId,
+                      long timestamp, String paymentMethod,
+                      String status, double totalPrice,
+                      int totalCalories, int totalCarbs,
+                      int totalProtein, int totalFats,
+                      int totalCaffeine,
+                      ArrayList<FoodModal> items) {
+
+        this.orderId = orderId;
+        this.userId = userId;
+        this.timestamp = timestamp;
+        this.paymentMethod = paymentMethod;
+        this.status = status;
+        this.totalPrice = totalPrice;
+        this.totalCalories = totalCalories;
+        this.totalCarbs = totalCarbs;
+        this.totalProtein = totalProtein;
+        this.totalFats = totalFats;
+        this.totalCaffeine = totalCaffeine;
         this.items = items;
     }
 
@@ -78,6 +101,10 @@ public class OrderModal {
 
     public int getTotalFats() {
         return totalFats;
+    }
+
+    public int getTotalCaffeine() {
+        return totalCaffeine;
     }
 
     public ArrayList<FoodModal> getItems() {
@@ -122,6 +149,9 @@ public class OrderModal {
 
     public void setTotalFats(int totalFats) {
         this.totalFats = totalFats;
+    }
+    public void setTotalCaffeine(int totalCaffeine) {
+        this.totalCaffeine = totalCaffeine;
     }
 
     public void setItems(ArrayList<FoodModal> items) {

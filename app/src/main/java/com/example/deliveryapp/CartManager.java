@@ -45,7 +45,8 @@ public class CartManager {
                 newItem.getCarbs(),
                 newItem.getProtein(),
                 newItem.getFats(),
-                newItem.getDiscount()
+                newItem.getDiscount(),
+                newItem.getCaffeine()
         );
 
         cartFood.setQuantity(Math.min(99, newItem.getQuantity()));
@@ -148,6 +149,17 @@ public class CartManager {
 
         for (FoodModal item : cartItems) {
             total += item.getFats() * item.getQuantity();
+        }
+
+        return total;
+    }
+
+    public static int getTotalCaffeine() {
+
+        int total = 0;
+
+        for (FoodModal item : cartItems) {
+            total += item.getCaffeine() * item.getQuantity();
         }
 
         return total;
