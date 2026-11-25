@@ -1,19 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="180dp"
-    android:layout_height="280dp"
+    android:layout_width="match_parent"
+    android:layout_height="240dp"
+    android:background="#FFF9F5"
     android:orientation="vertical"
-    android:padding="5dp"
-    android:background="#FFF9F5">
+    android:padding="5dp">
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        app:cardBackgroundColor="#FFFFFF"
         app:cardCornerRadius="20dp"
-        app:cardElevation="4dp"
-        app:cardBackgroundColor="#FFFFFF">
+        app:cardElevation="4dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -26,61 +25,94 @@
                 android:id="@+id/foodName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:gravity="start"
+                android:maxLines="2"
                 android:minHeight="36dp"
                 android:text="Chicken Burger"
-                android:textSize="16sp"
-                android:textStyle="bold"
+                android:textAlignment="textStart"
                 android:textColor="#1C2533"
-                android:gravity="center"
-                android:maxLines="2"
-                android:ellipsize="end"/>
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <FrameLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight="70">
+
+                    <ImageView
+                        android:id="@+id/foodImg"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:contentDescription="Food image"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ic_launcher_background" />
+                </FrameLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="30"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/foodPrice"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="9dp"
+                        android:gravity="start"
+                        android:text="$12.99"
+                        android:textAlignment="textStart"
+                        android:textColor="#F66A2A"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/foodCalories"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:gravity="start"
+                        android:text="450 kcal"
+                        android:textAlignment="textStart"
+                        android:textColor="#697381"
+                        android:textSize="13sp" />
+
+                    <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1" />
+
+                    <Button
+                        android:id="@+id/foodAddBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="44dp"
+                        android:layout_gravity="bottom|center_horizontal"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="10dp"
+                        android:backgroundTint="#F66A2A"
+                        android:elevation="2dp"
+                        android:text="Add +"
+                        android:textAllCaps="false"
+                        android:textColor="#FFFFFF"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </LinearLayout>
 
             <!-- Food Image -->
-            <ImageView
-                android:id="@+id/foodImg"
-                android:layout_width="match_parent"
-                android:layout_height="105dp"
-                android:layout_marginTop="6dp"
-                android:scaleType="centerCrop"
-                android:contentDescription="Food image"
-                android:src="@drawable/ic_launcher_background"/>
 
             <!-- Price -->
-            <TextView
-                android:id="@+id/foodPrice"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="9dp"
-                android:text="$12.99"
-                android:textSize="18sp"
-                android:textStyle="bold"
-                android:textColor="#F66A2A"
-                android:gravity="center"/>
 
             <!-- Calories -->
-            <TextView
-                android:id="@+id/foodCalories"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
-                android:text="450 kcal"
-                android:textSize="13sp"
-                android:textColor="#697381"
-                android:gravity="center"/>
 
             <!-- Add Button -->
-            <Button
-                android:id="@+id/foodAddBtn"
-                android:layout_width="match_parent"
-                android:layout_height="44dp"
-                android:layout_marginTop="8dp"
-                android:backgroundTint="#F66A2A"
-                android:text="Add +"
-                android:textSize="14sp"
-                android:textStyle="bold"
-                android:textColor="#FFFFFF"
-                android:textAllCaps="false"
-                android:elevation="2dp"/>
 
         </LinearLayout>
 

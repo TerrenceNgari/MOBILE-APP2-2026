@@ -84,7 +84,7 @@ public class OrderPage extends AppCompatActivity {
                 findViewById(R.id.restItemsRecView);
 
         recView.setLayoutManager(
-                new GridLayoutManager(this, 2)
+                new GridLayoutManager(this, 1)
         );
 
         adapter = new FoodAdapter(this, arrLst, restaurantId);
