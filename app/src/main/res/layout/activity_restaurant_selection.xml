@@ -30,15 +30,15 @@
         android:layout_width="70dp"
         android:layout_height="45dp"
         android:layout_marginStart="10dp"
-        android:background="#F66A2A"
-        android:gravity="center"
-        android:drawableTop="@drawable/ic_cart"
-        android:paddingTop="15dp"
+        android:background="@drawable/mb_primary"
         android:clickable="true"
+        android:drawableTop="@drawable/ic_cart"
         android:focusable="true"
-        app:layout_constraintTop_toTopOf="@id/textRestaurantSelection"
+        android:gravity="center"
+        android:paddingTop="15dp"
         app:layout_constraintBottom_toBottomOf="@id/textRestaurantSelection"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/textRestaurantSelection" />
 
     <!-- Profile Button -->
     <TextView

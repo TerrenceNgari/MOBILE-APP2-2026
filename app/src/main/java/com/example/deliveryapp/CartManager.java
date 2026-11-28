@@ -50,7 +50,7 @@ public class CartManager {
         );
 
         cartFood.setQuantity(Math.min(99, newItem.getQuantity()));
-
+        cartFood.setRestaurantId(newItem.getRestaurantId());
         cartItems.add(cartFood);
     }
 

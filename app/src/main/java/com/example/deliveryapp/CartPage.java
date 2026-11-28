@@ -226,6 +226,13 @@ public class CartPage extends AppCompatActivity {
                 false
         );
 
+        View cartItemBackground = row.findViewById(R.id.cartItemBackground);
+        if ("restaurant_02".equals(food.getRestaurantId())){
+            cartItemBackground.setBackgroundResource(R.drawable.bg_coffee_item);
+        } else {
+            cartItemBackground.setBackgroundResource(R.drawable.bg_burger_item);
+        }
+
         TextView textEmoji =
                 row.findViewById(R.id.textCartFoodEmoji);
 

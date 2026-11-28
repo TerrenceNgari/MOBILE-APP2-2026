@@ -264,6 +264,7 @@ public class ItemPage extends AppCompatActivity {
                 );
 
                 cartFood.setQuantity(quantity);
+                cartFood.setRestaurantId(restaurantId);
 
                 CartManager.addItem(cartFood);
 

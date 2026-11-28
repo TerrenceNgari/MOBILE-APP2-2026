@@ -2,6 +2,8 @@ package com.example.deliveryapp;
 
 public class FoodModal {
 
+    private String restaurantId;
+
     // Food information
     private String foodName;
     private String imageName;
@@ -155,5 +157,13 @@ public class FoodModal {
 
     public void setCaffeine(int caffeine) {
         this.caffeine = caffeine;
+    }
+
+    public String getRestaurantId() {
+        return restaurantId;
+    }
+
+    public void setRestaurantId(String restaurantId) {
+        this.restaurantId = restaurantId;
     }
 }
